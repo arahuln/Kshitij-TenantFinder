@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+</head>
+<body>
+    <h1>Profile Page</h1>
+    <% var a=0; %> 
+    <ul>
+        
+        <% for(let profile of profiles) {%> 
+            <% a++; %> 
+            <li><%= profile.name  %> </li>
+            <img src="<%= profile.image  %>" alt="img" width="50" height="60">
+            <li><a href="/profiles/<%= profile._id%>">View Profile</a></li>
+            <% } %> 
+    </ul>
+    <% if(a==0) {%> 
+    <a href="/profiles/new">Add Profile</a>
+    <% } %> 
+    <a href="/logout">LogOut</a>
+</body>
+</html>

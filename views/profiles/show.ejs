@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile.name</title>
+</head>
+<body>
+    <h1><%= profile.name  %> </h1>
+    <img src="<%= profile.image  %>" alt="img" width="50" height="60">
+    <ul>
+        <li>Name: <%= profile.name  %> </li>
+        <li>Email: <%= profile.email  %> </li>
+        <li>Bio: <%= profile.bio  %> </li>
+        <li>Phone: <%= profile.phone  %> </li>
+        <li>Age: <%= profile.age  %> </li>
+        
+        <li>Gender: <%= profile.gender  %> </li>
+        <li>Address: <%= profile.address  %> </li>
+    </ul>
+    <a href="/profiles">Home</a>
+    <a href="/profiles/<%=profile._id%>/edit ">Edit</a>
+</body>
+</html>
